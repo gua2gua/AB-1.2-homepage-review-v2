@@ -1668,3 +1668,173 @@ footer { border-color: rgba(0,0,0,.06); background: #fff; }
   .control-panel { inset-inline: 18px; }
   .recipe-panel { inset-inline: 12px; }
 }
+
+/* 02 v2 · the finished artifact carries its evidence as a second physical layer */
+.source-artifact {
+  position: absolute;
+  inset: 11px;
+  perspective: 900px;
+}
+.paper-layer,
+.report-paper,
+.lifted-source {
+  position: absolute;
+  border: 1px solid #d9dbe1;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(15,23,42,.08);
+}
+.paper-layer {
+  left: 16%;
+  top: 14px;
+  width: 66%;
+  height: 136px;
+  border-radius: 4px;
+  transform-origin: center bottom;
+}
+.paper-layer-one { transform: translate(7px, 5px) rotate(1.4deg); opacity: .72; }
+.paper-layer-two { transform: translate(13px, 10px) rotate(2.7deg); opacity: .42; }
+.report-paper {
+  left: 9%;
+  top: 6px;
+  z-index: 2;
+  width: 74%;
+  height: 145px;
+  padding: 15px 18px;
+  border-radius: 4px;
+  transform-origin: 35% 85%;
+}
+.paper-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9ca3af;
+  font-size: 4.5px;
+  letter-spacing: .1em;
+}
+.paper-meta em { color: #7c3aed; font-style: normal; }
+.report-paper h4 { margin: 7px 0 9px; font-size: 12px; font-weight: 600; }
+.report-paper p { max-width: 92%; margin: 7px 0; color: #4b5563; font-size: 6.5px; line-height: 1.55; }
+.report-paper a {
+  position: relative;
+  z-index: 2;
+  color: #6d28d9;
+  text-decoration: underline;
+  text-decoration-color: #c4b5fd;
+  text-underline-offset: 2px;
+}
+.paper-receipt {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  margin-top: 9px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: #f5f3ff;
+  color: #6b7280;
+  font-size: 5px;
+}
+.paper-receipt i { color: #7c3aed; font-style: normal; }
+.lifted-source {
+  right: 5%;
+  top: 20px;
+  z-index: 3;
+  width: 45%;
+  height: 132px;
+  padding: 12px 13px 11px;
+  border-color: #c4b5fd;
+  border-radius: 7px;
+  opacity: 0;
+  transform: translate(26px, 20px) rotate(4deg) scale(.82);
+  transform-origin: left bottom;
+}
+.lifted-source-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ececf0;
+  color: #7c3aed;
+  font-size: 4.5px;
+  letter-spacing: .08em;
+}
+.lifted-source-head em { color: #9ca3af; font-style: normal; letter-spacing: 0; }
+.lifted-source > small { display: block; margin-top: 9px; color: #9ca3af; font-size: 4px; letter-spacing: .12em; }
+.lifted-source h5 { margin: 3px 0 8px; font-size: 10px; }
+.source-line { width: 58%; height: 3px; margin: 5px 0; border-radius: 3px; background: #d8dbe0; }
+.source-line.long { width: 91%; }
+.source-line.medium { width: 73%; }
+.lifted-source strong {
+  display: block;
+  width: max-content;
+  margin: 7px 0 4px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 5px;
+  font-weight: 550;
+}
+.lifted-source footer {
+  position: absolute;
+  right: 11px;
+  bottom: 9px;
+  left: 11px;
+  color: #6d28d9;
+  font-size: 4.5px;
+}
+.lifted-source footer i { font-style: normal; }
+.source-artifact .source-cursor {
+  left: 54%;
+  top: 70px;
+  opacity: 0;
+}
+.principle-card:hover .source-artifact .source-cursor,
+.principle-card:focus-visible .source-artifact .source-cursor,
+.principle-card.is-active .source-artifact .source-cursor {
+  animation: evidence-click .9s cubic-bezier(.16,1,.3,1) forwards;
+}
+.principle-card:hover .report-paper,
+.principle-card:focus-visible .report-paper,
+.principle-card.is-active .report-paper {
+  animation: report-paper-yield .6s .72s cubic-bezier(.16,1,.3,1) forwards;
+}
+.principle-card:hover .paper-layer-one,
+.principle-card:focus-visible .paper-layer-one,
+.principle-card.is-active .paper-layer-one {
+  animation: paper-layer-one-move .6s .72s cubic-bezier(.16,1,.3,1) forwards;
+}
+.principle-card:hover .paper-layer-two,
+.principle-card:focus-visible .paper-layer-two,
+.principle-card.is-active .paper-layer-two {
+  animation: paper-layer-two-move .6s .72s cubic-bezier(.16,1,.3,1) forwards;
+}
+.principle-card:hover .lifted-source,
+.principle-card:focus-visible .lifted-source,
+.principle-card.is-active .lifted-source {
+  animation: source-card-lift .65s .7s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes evidence-click {
+  0% { opacity: 0; transform: translate(42px, 25px) scale(1); }
+  36% { opacity: 1; transform: translate(0, 0) scale(1); }
+  52% { transform: translate(0, 0) scale(.65); }
+  72%, 100% { opacity: 0; transform: translate(0, 0) scale(.65); }
+}
+@keyframes report-paper-yield {
+  to { transform: translateX(-28px) rotate(-1.2deg) scale(.96); filter: brightness(.96); }
+}
+@keyframes paper-layer-one-move {
+  to { transform: translate(-4px, 7px) rotate(-.4deg); }
+}
+@keyframes paper-layer-two-move {
+  to { transform: translate(2px, 13px) rotate(.8deg); }
+}
+@keyframes source-card-lift {
+  0% { opacity: 0; transform: translate(26px, 20px) rotate(4deg) scale(.82); }
+  72% { opacity: 1; transform: translate(-2px, -2px) rotate(-.7deg) scale(1.02); }
+  100% { opacity: 1; transform: translate(0, 0) rotate(0) scale(1); }
+}
+
+@media (max-width: 560px) {
+  .report-paper { left: 3%; width: 81%; padding-inline: 14px; }
+  .lifted-source { right: 2%; width: 49%; }
+}
