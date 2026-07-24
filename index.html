@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23111827%22/><path d=%22M17 18v28l15-11 15 11V18L32 29z%22 fill=%22white%22/></svg>" />
+  <title>AB 1.2 — Homepage Draft</title>
+  <!--
+    ASSUMPTIONS
+    - This is a visual direction artifact, not production website code.
+    - Existing Beta motion captures are used as the product truth surface.
+    - Creator copy is directional; the image remains a generic Beta analytics capture until a real creator run exists.
+    - User proof is intentionally omitted rather than fabricated.
+    - The Chrome Web Store CTA is visual only in this file.
+
+    VISUAL CONTRACT
+    - Content, story, product evidence and interactions are preserved.
+    - Visual tokens follow the current Actionbook website: Geist, #FAFAFA, neutral gray, restrained violet.
+    - Each section expresses one judgment with production-style hierarchy and technical receipts.
+  -->
+  <link rel="stylesheet" href="design-guide-v2.css" />
+</head>
+<body>
+  <div class="draft-ribbon mono" role="note">DRAFT · CONCEPT ONLY</div>
+  <header class="wrap">
+    <nav>
+      <a href="#top"><img class="brand" src="assets/actionbook-logo.svg" alt="Actionbook" /></a>
+      <div class="nav-center"><a href="#trust">Product</a><a href="#roles">Solutions</a><a href="https://actionbook.dev/pricing">Pricing</a></div>
+      <div class="nav-right"><span class="beta mono">BETA</span><a class="btn" href="#last">Add to Chrome</a></div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Meet your browser coworker</span>
+          <h1>Open Actionbook.<br />Close out web work.</h1>
+          <p>Actionbook is an AI agent in your browser. It reads data behind your logins, operates websites you already use, and delivers finished work, not answers.</p>
+          <div class="hero-actions"><a class="btn" href="#last">Add to Chrome</a><a class="btn ghost" href="#trust">Watch a real run ↓</a></div>
+          <div class="hero-note mono">CHROME EXTENSION · YOUR LOGINS STAY ON THIS DEVICE</div>
+        </div>
+        <div class="product-stage">
+          <div class="demo-brief" aria-live="polite">
+            <b>LinkedIn prospecting</b><p>Research each prospect’s recent activity, draft a grounded opener, and deliver openers.csv. Nothing is sent.</p>
+          </div>
+          <div class="stage-window">
+            <div class="stage-media" id="hero-motion">
+              <iframe src="assets/linkedin-prospecting-motion.html" title="Actionbook researching LinkedIn prospects and delivering openers.csv"></iframe>
+            </div>
+          </div>
+          <div class="demo-controls">
+            <div class="scene-switch mono" role="group" aria-label="Choose an Actionbook demo">
+              <button class="active" type="button" data-scene="linkedin" aria-pressed="true"><i></i>LINKEDIN PROSPECTING</button>
+              <button type="button" data-scene="monday" aria-pressed="false"><i></i>MONDAY REPORT</button>
+            </div>
+            <button class="motion-toggle mono" type="button" aria-label="Pause the Actionbook demo"><i></i><span>PAUSE</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="trust">
+      <div class="wrap">
+        <div class="trust-head">
+          <h2>Off your plate. Not out of your hands.</h2>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
+            <div class="principle-top"><span class="principle-num mono">01</span><div><h3 class="mono">SIDE BY SIDE</h3><p>Works in your side panel, on the page you're looking at.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
+            <div class="principle-illo side-illo" aria-hidden="true">
+              <div class="mini-browser">
+                <div class="mini-chrome"><i></i><i></i><i></i><span class="mini-address">workspace.local/campaigns</span></div>
+                <div class="mini-page"><b>Campaign performance</b><small>LAST 30 DAYS</small><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i></div><div class="mini-row"></div><div class="mini-row"></div></div>
+                <div class="mini-side-panel">
+                  <div class="ab-panel-bar"><span class="ab-mark"></span><b>Actionbook</b><i>•••</i></div>
+                  <div class="ab-user-prompt">Prepare a campaign report</div>
+                  <div class="ab-tool-line done"><i>✓</i><span><b>Read campaign metrics</b><small>workspace.local</small></span></div>
+                  <div class="ab-tool-line active"><i></i><span><b>Compare performance</b><small>Working in this page</small></span></div>
+                  <div class="ab-status"><span class="ab-mark active"></span><em>Working in your browser</em></div>
+                  <div class="ab-composer"><span>Write a message…</span><i>■</i></div>
+                </div>
+                <div class="mini-control-pill"><i></i>Actionbook is controlling this page</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
+            <div class="principle-top"><span class="principle-num mono">02</span><div><h3 class="mono">SOURCED</h3><p>Every fact links to the page it came from.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
+            <div class="principle-illo sourced-illo" aria-hidden="true">
+              <div class="report-viewer">
+                <div class="report-bar"><span class="ab-mark"></span><b>Pricing brief</b><span>Task files</span><i>↓</i><i>•••</i></div>
+                <div class="report-document">
+                  <small>REPORT</small><h4>Pricing brief</h4>
+                  <p>The Pro plan includes team workspaces and shared access. <a>Plan details ↗</a></p>
+                  <p>Annual billing is available from the account page. <a>Billing ↗</a></p>
+                  <div class="report-note"><i>✓</i><span>Sources kept with the report</span></div>
+                </div>
+                <div class="source-preview">
+                  <div class="source-browser-bar"><i></i><i></i><i></i><span>pricing.example.com/plans</span></div>
+                  <div class="source-page"><small>PLANS</small><b>Pro plan</b><span class="source-copy long"></span><span class="source-copy"></span><em>Team workspaces</em><span class="source-copy medium"></span></div>
+                  <div class="opened-from"><i>↗</i>Opened from report</div>
+                </div>
+                <span class="source-cursor"></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
+            <div class="principle-top"><span class="principle-num mono">03</span><div><h3 class="mono">YOURS</h3><p>Confirm the big moves. Stop it anytime.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
+            <div class="principle-illo yours-illo" aria-hidden="true">
+              <div class="control-panel">
+                <div class="control-top"><i>☰</i><b>Campaign report</b><span>•••</span></div>
+                <div class="plan-state">
+                  <div class="plan-card">
+                    <small>PLAN</small><h4>Prepare and send the finished report</h4>
+                    <div class="plan-step"><i>1</i><span>Read campaign dashboard</span></div>
+                    <div class="plan-step"><i>2</i><span>Prepare the report</span></div>
+                    <div class="plan-step"><i>3</i><span>Send after confirmation</span></div>
+                    <div class="plan-actions"><b>Confirm &amp; run</b><span>Adjust</span><span>Replan</span></div>
+                  </div>
+                </div>
+                <div class="running-state">
+                  <div class="confirmed-row"><i>✓</i><span><b>Plan confirmed</b><small>3 steps</small></span></div>
+                  <div class="running-tool"><span class="ab-mark active"></span><div><b>Reading campaign dashboard</b><small>Working in this page</small></div></div>
+                  <div class="run-progress"><i></i></div>
+                </div>
+                <div class="control-composer"><span>Write a message…</span><i class="send-icon">↑</i><i class="stop-icon">■</i></div>
+              </div>
+              <span class="control-cursor"></span>
+            </div>
+          </article>
+
+          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
+            <div class="principle-top"><span class="principle-num mono">04</span><div><h3 class="mono">FASTER NEXT TIME</h3><p>Finished runs become Recipes. Run the same work again in one click.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
+            <div class="principle-illo recipe-illo" aria-hidden="true">
+              <div class="recipe-panel">
+                <div class="recipe-complete-state">
+                  <div class="complete-status"><span class="ab-mark"></span><b>Actionbook complete</b><small>Report ready · sources kept</small></div>
+                  <div class="recipe-suggestion"><i>◇</i><span><b>Make this task a Recipe</b><small>The steps that worked are saved. Next time it's one click.</small></span><em>›</em></div>
+                </div>
+                <div class="recipe-detail-state">
+                  <div class="recipe-detail-head"><b>Monday report</b><i>×</i></div>
+                  <small>DESCRIPTION</small><p>Prepare the weekly performance report from the analytics dashboard.</p>
+                  <div class="recipe-use">◇ <b>Use this recipe</b></div>
+                  <div class="recipe-how"><small>HOW IT WORKS</small><span><i>1</i>Open analytics dashboard</span><span><i>2</i>Collect the weekly metrics</span><span><i>3</i>Prepare the report</span></div>
+                </div>
+                <div class="recipe-restart-state">
+                  <div class="recipe-message">Use Recipe “Monday report”</div>
+                  <div class="recipe-live"><span class="ab-mark active"></span><div><b>Starting Monday report</b><small>Opening analytics dashboard</small></div></div>
+                  <div class="recipe-run-bar"><i></i></div>
+                </div>
+              </div>
+              <span class="recipe-cursor"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="proof">
+      <div class="wrap">
+        <div class="metrics">
+          <div class="metrics-title"><h2>Performance you can measure.</h2></div>
+          <div class="metric-grid">
+            <article class="metric">
+              <div class="metric-figure"><div class="metric-scene"><div class="receipt-mini"><div class="receipt-row"><span>Pricing</span><span>✓ linked</span></div><div class="receipt-row"><span>Plan details</span><span>✓ linked</span></div><div class="receipt-row"><span>Billing</span><span>✓ linked</span></div></div></div></div>
+              <h4>Highest accuracy</h4><p>Works from the site’s real data, so the result holds up.</p>
+            </article>
+            <article class="metric">
+              <div class="metric-figure"><div class="metric-scene route-mini"><span class="route-node start">Task</span><span class="route-clicks"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="route-direct"></span><span class="route-node end">Result</span></div></div>
+              <h4>10× faster</h4><p>Goes straight to the source instead of clicking through every page.</p>
+            </article>
+            <article class="metric">
+              <div class="metric-figure"><div class="metric-scene"><div class="token-page"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="token-arrow"></span><div class="token-result"><i></i><i></i></div></div></div>
+              <h4>87% fewer tokens</h4><p>Brings back only what the task needs, not the whole page.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles" id="roles">
+      <div class="wrap">
+        <div class="roles-head">
+          <div><span class="eyebrow">What can it close out for me?</span><h2>Start with the work you already have open.</h2></div>
+          <p>Pick a role. See the task, the sites involved, and the finished artifact.</p>
+        </div>
+
+        <div class="role-board">
+          <div class="role-list">
+            <div class="role-item">Marketing</div>
+            <div class="role-item">Sales</div>
+            <div class="role-item">Product</div>
+            <div class="role-item active">Creator</div>
+          </div>
+          <div class="role-view">
+            <div>
+              <span class="eyebrow">Creator · weekly performance</span>
+              <h3>Your content lives everywhere. Your report shouldn’t.</h3>
+              <p>Pull last week’s post performance from your signed-in social dashboards into one cross-platform report.</p>
+              <div class="job-chain mono">
+                <div><b>Job</b><span>Compare this week’s content performance</span></div>
+                <div><b>Websites</b><span>Creator analytics across social platforms</span></div>
+                <div><b>Artifact</b><span>Raw data + cross-platform performance report</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="role-image"><img src="assets/report-complete.png" alt="Example Actionbook report output shape" /></div>
+              <div class="asset-note mono">BETA CAPTURE · FINAL CREATOR RUN ASSET STILL REQUIRED</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="solo">
+          <div class="solo-copy"><span class="eyebrow">Solo founder</span><h3>Every job is yours.</h3><p>Actionbook handles the browser work that would otherwise wait for a teammate.</p></div>
+          <div class="solo-ledger mono">
+            <div class="ledger-row"><b>Research</b><span>Competitor brief</span><span>brief.md</span></div>
+            <div class="ledger-row"><b>Marketing</b><span>Weekly performance</span><span>report.csv</span></div>
+            <div class="ledger-row"><b>Sales</b><span>Prospect context</span><span>list.xlsx</span></div>
+            <div class="ledger-row"><b>Repeat</b><span>Published Recipe</span><span>One-click rerun</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coda" id="last">
+      <div class="wrap">
+        <div class="coda-head">
+          <div class="coda-before"><h2>Got something open?</h2><p>Add Actionbook to Chrome and hand it the web work already sitting in your tabs. Stay with it when you want to — or come back for the finished work.</p></div>
+          <div class="coda-after"><h2>There. Now you’re done.</h2><p>That was the last open tab on this page. Give Actionbook something real.</p></div>
+          <a class="btn" href="#last">Add to Chrome</a>
+          <div class="good mono">CHROME EXTENSION · LOGINS STAY ON THIS DEVICE · REVIEW THE PLAN · STOP ANY RUN</div>
+        </div>
+
+        <div class="tab-field">
+          <div class="wordmark-ghost">actionbook</div>
+          <div class="mini-tab done t1"><i></i><span>pricing brief · done</span></div>
+          <div class="mini-tab done t2"><i></i><span>creator report · done</span></div>
+          <div class="mini-tab done t3"><i></i><span>raw data · saved</span></div>
+          <div class="mini-tab done t4"><i></i><span>sources · linked</span></div>
+          <div class="mini-tab done t5"><i></i><span>recipe · ready</span></div>
+          <button class="mini-tab open" id="last-tab" type="button" aria-controls="peek" aria-expanded="false"><i></i><span>one last open tab</span></button>
+          <aside class="peek" id="peek" aria-hidden="true">
+            <div class="peek-head"><span class="peek-mark"></span>Actionbook Beta</div>
+            <div class="peek-body">
+              <div class="peek-row"><span>✓</span><span>Read the open task</span></div>
+              <div class="peek-row"><span>✓</span><span>Collected the loose rows</span></div>
+              <div class="peek-row"><span>✓</span><span>Closed out the page</span></div>
+              <div class="peek-result"><b>Homepage review · done</b><span>Finished artifact · sources kept</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div><img src="assets/actionbook-logo.svg" alt="Actionbook" /><p style="margin-top:18px;max-width:280px">Open Actionbook. Close out web work.</p></div>
+      <div><h5>Product</h5><a href="#trust">How it works</a><a href="#proof">Why Actionbook</a><a href="#roles">For your work</a><a href="#last">Add to Chrome</a></div>
+      <div><h5>Resources</h5><a href="#">Pricing</a><a href="#">Support</a><a href="#">Privacy</a></div>
+      <div><h5>Good to know</h5><p>Credentials stay local.</p><p>You can stop any run.</p><p class="mono">© 2026 ACTIONBOOK</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const heroMotion = document.getElementById('hero-motion');
+    const motionFrame = heroMotion.querySelector('iframe');
+    const demoBrief = document.querySelector('.demo-brief');
+    const demoBriefTitle = demoBrief.querySelector('b');
+    const demoBriefCopy = demoBrief.querySelector('p');
+    const sceneButtons = document.querySelectorAll('.scene-switch button');
+    const motionToggle = document.querySelector('.motion-toggle');
+    const motionLabel = motionToggle.querySelector('span');
+    const scenes = {
+      linkedin: {
+        title: 'LinkedIn prospecting',
+        copy: 'Research each prospect’s recent activity, draft a grounded opener, and deliver openers.csv. Nothing is sent.',
+        src: 'assets/linkedin-prospecting-motion.html',
+        frameTitle: 'Actionbook researching LinkedIn prospects and delivering openers.csv'
+      },
+      monday: {
+        title: 'Monday report',
+        copy: 'Turn a finished weekly report into a reusable Recipe, then run the same workflow again in one click.',
+        src: 'assets/weekly-report-motion.html?v=5',
+        frameTitle: 'Actionbook turning a Monday report into a reusable Recipe and running it again'
+      }
+    };
+    let motionPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const syncMotionState = () => {
+      motionFrame.contentWindow.postMessage(motionPaused ? 'actionbook:pause' : 'actionbook:play', '*');
+    };
+
+    const renderMotionControl = () => {
+      motionToggle.classList.toggle('paused', motionPaused);
+      motionToggle.setAttribute('aria-label', motionPaused ? 'Play the Actionbook demo' : 'Pause the Actionbook demo');
+      motionLabel.textContent = motionPaused ? 'PLAY' : 'PAUSE';
+    };
+
+    renderMotionControl();
+
+    motionFrame.addEventListener('load', () => {
+      heroMotion.classList.remove('is-switching');
+      syncMotionState();
+    });
+
+    sceneButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.classList.contains('active')) return;
+        const scene = scenes[button.dataset.scene];
+        heroMotion.classList.add('is-switching');
+        sceneButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-pressed', String(active));
+        });
+        demoBriefTitle.textContent = scene.title;
+        demoBriefCopy.textContent = scene.copy;
+        motionFrame.title = scene.frameTitle;
+        motionFrame.src = scene.src;
+      });
+    });
+
+    motionToggle.addEventListener('click', () => {
+      motionPaused = !motionPaused;
+      syncMotionState();
+      renderMotionControl();
+    });
+
+    document.querySelectorAll('.principle-card').forEach((card) => {
+      const toggleCard = () => {
+        const active = !card.classList.contains('is-active');
+        document.querySelectorAll('.principle-card.is-active').forEach((item) => {
+          item.classList.remove('is-active');
+          item.setAttribute('aria-pressed', 'false');
+        });
+        card.classList.toggle('is-active', active);
+        card.setAttribute('aria-pressed', String(active));
+      };
+      card.addEventListener('click', toggleCard);
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleCard();
+        }
+      });
+    });
+
+    const coda = document.querySelector('.coda');
+    const tab = document.getElementById('last-tab');
+    const peek = document.getElementById('peek');
+    tab.addEventListener('click', () => {
+      const open = !coda.classList.contains('complete');
+      coda.classList.toggle('complete', open);
+      peek.classList.toggle('show', open);
+      peek.setAttribute('aria-hidden', String(!open));
+      tab.setAttribute('aria-expanded', String(open));
+      tab.querySelector('span').textContent = open ? 'last tab · done' : 'one last open tab';
+    });
+  </script>
+</body>
+</html>
