@@ -67,101 +67,85 @@
           <h2>Off your plate. Not out of your hands.</h2>
         </div>
 
-        <div class="principle-grid">
-          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
-            <div class="principle-top"><span class="principle-num mono">01</span><div><h3 class="mono">SIDE BY SIDE</h3><p>Works in your side panel, on the page you're looking at.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
-            <div class="principle-illo side-illo" aria-hidden="true">
-              <div class="mini-browser">
-                <div class="mini-chrome"><i></i><i></i><i></i><span class="mini-address">workspace.local/campaigns</span></div>
-                <div class="mini-page"><b>Campaign performance</b><small>LAST 30 DAYS</small><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i></div><div class="mini-row"></div><div class="mini-row"></div></div>
-                <div class="mini-side-panel">
-                  <div class="ab-panel-bar"><span class="ab-mark"></span><b>Actionbook</b><i>•••</i></div>
-                  <div class="ab-user-prompt">Prepare a campaign report</div>
-                  <div class="ab-tool-line done"><i>✓</i><span><b>Read campaign metrics</b><small>workspace.local</small></span></div>
-                  <div class="ab-tool-line active"><i></i><span><b>Compare performance</b><small>Working in this page</small></span></div>
-                  <div class="ab-status"><span class="ab-mark active"></span><em>Working in your browser</em></div>
-                  <div class="ab-composer"><span>Write a message…</span><i>■</i></div>
+        <div class="trust-story">
+          <div class="trust-steps" role="tablist" aria-label="How Actionbook completes one task">
+            <button class="trust-step active" type="button" role="tab" data-trust-step="0" aria-selected="true">
+              <span class="trust-step-num mono">01</span><span><b class="mono">SIDE BY SIDE</b><small>Works in your side panel, on the page you're looking at.</small></span>
+            </button>
+            <button class="trust-step" type="button" role="tab" data-trust-step="1" aria-selected="false">
+              <span class="trust-step-num mono">02</span><span><b class="mono">YOURS</b><small>Confirm the big moves. Stop it anytime.</small></span>
+            </button>
+            <button class="trust-step" type="button" role="tab" data-trust-step="2" aria-selected="false">
+              <span class="trust-step-num mono">03</span><span><b class="mono">SOURCED</b><small>Every fact links to the page it came from.</small></span>
+            </button>
+            <button class="trust-step" type="button" role="tab" data-trust-step="3" aria-selected="false">
+              <span class="trust-step-num mono">04</span><span><b class="mono">FASTER NEXT TIME</b><small>Finished runs become Recipes. Run the same work again in one click.</small></span>
+            </button>
+          </div>
+
+          <div class="trust-stage-wrap">
+            <div class="trust-stage" id="trust-stage" data-beat="0" data-phase="intro" role="tabpanel" aria-label="One Actionbook task from start to reusable Recipe">
+              <div class="trust-browser">
+                <div class="trust-running-banner"><span>ⓘ</span><b>Actionbook Beta</b> is working in this browser <em>Stop</em></div>
+                <div class="trust-browser-bar"><span>‹</span><span>›</span><span>↻</span><div><i></i><b id="trust-address">workspace.local/campaigns</b></div><span>⋮</span></div>
+                <div class="trust-webpage">
+                  <div class="trust-dashboard">
+                    <div class="trust-page-kicker mono">CAMPAIGN DASHBOARD</div>
+                    <h4>Campaign performance</h4>
+                    <div class="trust-stat-row"><div><small>Reach</small><b>—</b></div><div><small>Engagement</small><b>—</b></div><div><small>Conversions</small><b>—</b></div></div>
+                    <div class="trust-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="trust-report">
+                    <div class="trust-page-kicker mono">FINISHED ARTIFACT</div>
+                    <div class="trust-report-head"><h4>Campaign performance report</h4><span>✓ Ready</span></div>
+                    <p>Performance improved after the campaign refresh. <a>Campaign dashboard ↗</a></p>
+                    <p>The strongest results came from returning visitors. <a>Audience details ↗</a></p>
+                    <div class="trust-report-files"><span><b>REPORT</b>campaign-report.md</span><span><b>RAW DATA</b>campaign-metrics.csv</span></div>
+                  </div>
+                  <div class="trust-source-card"><small class="mono">SOURCE</small><b>Campaign dashboard</b><span>workspace.local/campaigns</span><p>Opened from the linked finding.</p></div>
                 </div>
-                <div class="mini-control-pill"><i></i>Actionbook is controlling this page</div>
               </div>
-            </div>
-          </article>
 
-          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
-            <div class="principle-top"><span class="principle-num mono">02</span><div><h3 class="mono">SOURCED</h3><p>Every fact links to the page it came from.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
-            <div class="principle-illo sourced-illo" aria-hidden="true">
-              <div class="source-artifact">
-                <div class="paper-layer paper-layer-two"></div>
-                <div class="paper-layer paper-layer-one"></div>
-                <article class="report-paper">
-                  <div class="paper-meta mono"><span>FINISHED REPORT</span><em>3 SOURCES KEPT</em></div>
-                  <h4>Pricing brief</h4>
-                  <p>The Pro plan includes team workspaces and shared access. <a>Plan details ↗</a></p>
-                  <p>Annual billing is available from the account page. <a>Billing ↗</a></p>
-                  <div class="paper-receipt"><i>✓</i><span>Each linked claim opens its source.</span></div>
-                </article>
-                <article class="lifted-source">
-                  <div class="lifted-source-head"><span class="mono">SOURCE 01</span><em>pricing.example.com</em></div>
-                  <small>PLAN DETAILS</small>
-                  <h5>Pro plan</h5>
-                  <div class="source-line long"></div><div class="source-line"></div>
-                  <strong>Team workspaces</strong>
-                  <div class="source-line medium"></div>
-                  <footer><i>↗</i> Opened from “Plan details”</footer>
-                </article>
-                <span class="source-cursor"></span>
-              </div>
-            </div>
-          </article>
-
-          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
-            <div class="principle-top"><span class="principle-num mono">03</span><div><h3 class="mono">YOURS</h3><p>Confirm the big moves. Stop it anytime.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
-            <div class="principle-illo yours-illo" aria-hidden="true">
-              <div class="control-panel">
-                <div class="control-top"><i>☰</i><b>Campaign report</b><span>•••</span></div>
-                <div class="plan-state">
-                  <div class="plan-card">
-                    <small>PLAN</small><h4>Prepare and send the finished report</h4>
-                    <div class="plan-step"><i>1</i><span>Read campaign dashboard</span></div>
-                    <div class="plan-step"><i>2</i><span>Prepare the report</span></div>
-                    <div class="plan-step"><i>3</i><span>Send after confirmation</span></div>
-                    <div class="plan-actions"><b>Confirm &amp; run</b><span>Adjust</span><span>Replan</span></div>
+              <aside class="trust-panel">
+                <div class="trust-panel-head"><span class="ab-mark"></span><b>Actionbook</b><i>•••</i></div>
+                <div class="trust-panel-content">
+                  <div class="trust-panel-state trust-intro">
+                    <div class="trust-user-message">Prepare the campaign report from this page.</div>
+                    <div class="trust-agent-note"><span class="ab-mark active"></span><div><b>Working beside this page</b><small>I can read the signed-in dashboard and return the finished files here.</small></div></div>
+                  </div>
+                  <div class="trust-panel-state trust-plan">
+                    <div class="trust-plan-card">
+                      <small class="mono">PLAN</small><h5>Prepare the campaign report</h5>
+                      <div><i>1</i>Read campaign dashboard</div><div><i>2</i>Prepare the report</div><div><i>3</i>Return the files</div>
+                      <footer><b>Confirm &amp; run</b><span>Adjust</span><span>Replan</span></footer>
+                    </div>
+                  </div>
+                  <div class="trust-panel-state trust-run">
+                    <div class="trust-confirmed"><i>✓</i><span><b>Plan confirmed</b><small>3 steps</small></span></div>
+                    <div class="trust-tool-row"><span class="ab-mark active"></span><div><b>Reading campaign dashboard</b><small>Working in this page</small></div></div>
+                    <div class="trust-run-progress"><i></i></div>
+                  </div>
+                  <div class="trust-panel-state trust-complete">
+                    <div class="trust-complete-status"><span class="ab-mark"></span><div><b>Campaign report is ready</b><small>2 files · sources kept</small></div></div>
+                    <div class="trust-complete-files"><span>campaign-report.md</span><span>campaign-metrics.csv</span></div>
+                  </div>
+                  <div class="trust-panel-state trust-recipe-suggest">
+                    <div class="trust-complete-status"><span class="ab-mark"></span><div><b>Actionbook complete</b><small>Report ready · sources kept</small></div></div>
+                    <div class="trust-recipe-action"><i>◇</i><span><b>Make this task a Recipe</b><small>The steps that worked are saved. Next time it's one click.</small></span><em>›</em></div>
+                  </div>
+                  <div class="trust-panel-state trust-recipe-ready">
+                    <div class="trust-recipe-card"><small class="mono">RECIPE</small><h5>Campaign report</h5><p>Prepare the report from the signed-in campaign dashboard.</p><b>Use this recipe</b></div>
                   </div>
                 </div>
-                <div class="running-state">
-                  <div class="confirmed-row"><i>✓</i><span><b>Plan confirmed</b><small>3 steps</small></span></div>
-                  <div class="running-tool"><span class="ab-mark active"></span><div><b>Reading campaign dashboard</b><small>Working in this page</small></div></div>
-                  <div class="run-progress"><i></i></div>
-                </div>
-                <div class="control-composer"><span>Write a message…</span><i class="send-icon">↑</i><i class="stop-icon">■</i></div>
-              </div>
-              <span class="control-cursor"></span>
+                <div class="trust-composer"><span>Write a message…</span><i class="trust-send">↑</i><i class="trust-stop">■</i></div>
+              </aside>
+              <span class="trust-pointer"></span>
             </div>
-          </article>
-
-          <article class="principle-card" role="button" tabindex="0" aria-pressed="false">
-            <div class="principle-top"><span class="principle-num mono">04</span><div><h3 class="mono">FASTER NEXT TIME</h3><p>Finished runs become Recipes. Run the same work again in one click.</p></div><span class="principle-hint mono">HOVER / TAP</span></div>
-            <div class="principle-illo recipe-illo" aria-hidden="true">
-              <div class="recipe-panel">
-                <div class="recipe-complete-state">
-                  <div class="complete-status"><span class="ab-mark"></span><b>Actionbook complete</b><small>Report ready · sources kept</small></div>
-                  <div class="recipe-suggestion"><i>◇</i><span><b>Make this task a Recipe</b><small>The steps that worked are saved. Next time it's one click.</small></span><em>›</em></div>
-                </div>
-                <div class="recipe-detail-state">
-                  <div class="recipe-detail-head"><b>Monday report</b><i>×</i></div>
-                  <small>DESCRIPTION</small><p>Prepare the weekly performance report from the analytics dashboard.</p>
-                  <div class="recipe-use">◇ <b>Use this recipe</b></div>
-                  <div class="recipe-how"><small>HOW IT WORKS</small><span><i>1</i>Open analytics dashboard</span><span><i>2</i>Collect the weekly metrics</span><span><i>3</i>Prepare the report</span></div>
-                </div>
-                <div class="recipe-restart-state">
-                  <div class="recipe-message">Use Recipe “Monday report”</div>
-                  <div class="recipe-live"><span class="ab-mark active"></span><div><b>Starting Monday report</b><small>Opening analytics dashboard</small></div></div>
-                  <div class="recipe-run-bar"><i></i></div>
-                </div>
-              </div>
-              <span class="recipe-cursor"></span>
+            <div class="trust-stage-controls">
+              <div class="trust-timeline" aria-hidden="true"><i id="trust-progress"></i></div>
+              <button class="trust-motion-toggle mono" id="trust-motion-toggle" type="button" aria-label="Pause this task animation"><i></i><span>PAUSE</span></button>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -343,24 +327,131 @@
       renderMotionControl();
     });
 
-    document.querySelectorAll('.principle-card').forEach((card) => {
-      const toggleCard = () => {
-        const active = !card.classList.contains('is-active');
-        document.querySelectorAll('.principle-card.is-active').forEach((item) => {
-          item.classList.remove('is-active');
-          item.setAttribute('aria-pressed', 'false');
-        });
-        card.classList.toggle('is-active', active);
-        card.setAttribute('aria-pressed', String(active));
-      };
-      card.addEventListener('click', toggleCard);
-      card.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          toggleCard();
+    const trustStage = document.getElementById('trust-stage');
+    const trustSteps = Array.from(document.querySelectorAll('.trust-step'));
+    const trustStepsRail = document.querySelector('.trust-steps');
+    const trustProgress = document.getElementById('trust-progress');
+    const trustMotionToggle = document.getElementById('trust-motion-toggle');
+    const trustMotionLabel = trustMotionToggle.querySelector('span');
+    const reduceTrustMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const trustDuration = 12;
+    const trustBeatStarts = [0, 2.7, 5.6, 8.8];
+    let trustTime = reduceTrustMotion ? trustDuration : 0;
+    let trustPlaying = false;
+    let trustStarted = false;
+    let trustUserPaused = reduceTrustMotion;
+    let trustInView = false;
+    let trustLastFrame = null;
+
+    const trustFrame = () => {
+      const time = Math.min(trustTime, trustDuration - .001);
+      let beat = 0;
+      if (time >= trustBeatStarts[3]) beat = 3;
+      else if (time >= trustBeatStarts[2]) beat = 2;
+      else if (time >= trustBeatStarts[1]) beat = 1;
+
+      const localTime = time - trustBeatStarts[beat];
+      let phase = 'intro';
+      if (beat === 1) phase = localTime < 1.25 ? 'plan' : 'run';
+      if (beat === 2) phase = localTime < 1.3 ? 'report' : 'source';
+      if (beat === 3) phase = localTime < 1.35 ? 'suggest' : 'ready';
+      return { beat, phase };
+    };
+
+    const renderTrustStory = () => {
+      const { beat, phase } = trustFrame();
+      const ended = trustTime >= trustDuration;
+      trustStage.dataset.beat = String(beat);
+      trustStage.dataset.phase = phase;
+      trustProgress.style.width = `${Math.min(100, trustTime / trustDuration * 100)}%`;
+
+      trustSteps.forEach((step, index) => {
+        const active = index === beat;
+        step.classList.toggle('active', active);
+        step.classList.toggle('is-past', index < beat);
+        step.setAttribute('aria-selected', String(active));
+      });
+
+      trustMotionToggle.classList.toggle('paused', !trustPlaying);
+      trustMotionToggle.classList.toggle('ended', ended);
+      trustMotionLabel.textContent = ended ? 'REPLAY' : trustPlaying ? 'PAUSE' : 'PLAY';
+      trustMotionToggle.setAttribute(
+        'aria-label',
+        ended ? 'Replay this task animation' : trustPlaying ? 'Pause this task animation' : 'Play this task animation'
+      );
+    };
+
+    const playTrustStory = () => {
+      if (reduceTrustMotion || trustTime >= trustDuration) return;
+      trustPlaying = true;
+      trustUserPaused = false;
+      trustLastFrame = null;
+      renderTrustStory();
+    };
+
+    const tickTrustStory = (now) => {
+      if (trustPlaying) {
+        if (trustLastFrame !== null) {
+          trustTime = Math.min(trustDuration, trustTime + (now - trustLastFrame) / 1000);
+          if (trustTime >= trustDuration) trustPlaying = false;
+        }
+        trustLastFrame = now;
+        renderTrustStory();
+      } else {
+        trustLastFrame = null;
+      }
+      requestAnimationFrame(tickTrustStory);
+    };
+
+    trustSteps.forEach((step, index) => {
+      step.addEventListener('click', () => {
+        trustTime = trustBeatStarts[index] + .02;
+        trustStarted = true;
+        if (!reduceTrustMotion) playTrustStory();
+        else renderTrustStory();
+
+        if (window.innerWidth <= 900) {
+          trustStepsRail.scrollTo({
+            left: Math.max(0, step.offsetLeft - 8),
+            behavior: reduceTrustMotion ? 'auto' : 'smooth'
+          });
         }
       });
     });
+
+    trustMotionToggle.addEventListener('click', () => {
+      if (trustTime >= trustDuration) {
+        trustTime = 0;
+        trustStarted = true;
+        if (!reduceTrustMotion) playTrustStory();
+        else renderTrustStory();
+        return;
+      }
+      if (trustPlaying) {
+        trustPlaying = false;
+        trustUserPaused = true;
+      } else if (!reduceTrustMotion) {
+        playTrustStory();
+      }
+      renderTrustStory();
+    });
+
+    const trustObserver = new IntersectionObserver((entries) => {
+      trustInView = entries[0].intersectionRatio >= .42;
+      if (trustInView && !trustStarted && !reduceTrustMotion) {
+        trustStarted = true;
+        playTrustStory();
+      } else if (!trustInView && trustPlaying) {
+        trustPlaying = false;
+      } else if (trustInView && trustStarted && !trustUserPaused && trustTime < trustDuration) {
+        playTrustStory();
+      }
+      renderTrustStory();
+    }, { threshold: [0, .42] });
+
+    renderTrustStory();
+    trustObserver.observe(trustStage);
+    requestAnimationFrame(tickTrustStory);
 
     const coda = document.querySelector('.coda');
     const tab = document.getElementById('last-tab');
