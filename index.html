@@ -9,7 +9,7 @@
     ASSUMPTIONS
     - This is a visual direction artifact, not production website code.
     - Existing Beta motion captures are used as the product truth surface.
-    - Creator copy is directional; the image remains a generic Beta analytics capture until a real creator run exists.
+    - Hero scenes use the completed Beta motion artifacts for LinkedIn prospecting, Monday report, and creator performance reporting.
     - User proof is intentionally omitted rather than fabricated.
     - The Chrome Web Store CTA is visual only in this file.
 
@@ -51,8 +51,9 @@
           </div>
           <div class="demo-controls">
             <div class="scene-switch mono" role="group" aria-label="Choose an Actionbook demo">
-              <button class="active" type="button" data-scene="linkedin" aria-pressed="true"><i></i>LINKEDIN PROSPECTING</button>
-              <button type="button" data-scene="monday" aria-pressed="false"><i></i>MONDAY REPORT</button>
+              <button class="active" type="button" data-scene="linkedin" aria-pressed="true"><i></i><span class="scene-label-long">LINKEDIN PROSPECTING</span><span class="scene-label-short">LINKEDIN</span></button>
+              <button type="button" data-scene="monday" aria-pressed="false"><i></i><span>MONDAY REPORT</span></button>
+              <button type="button" data-scene="creator" aria-pressed="false"><i></i><span>CREATOR REPORT</span></button>
             </div>
             <button class="motion-toggle mono" type="button" aria-label="Pause the Actionbook demo"><i></i><span>PAUSE</span></button>
           </div>
@@ -286,6 +287,12 @@
         copy: 'Turn a finished weekly report into a reusable Recipe, then run the same workflow again in one click.',
         src: 'assets/weekly-report-motion.html?v=5',
         frameTitle: 'Actionbook turning a Monday report into a reusable Recipe and running it again'
+      },
+      creator: {
+        title: 'Creator performance report',
+        copy: 'Read signed-in channel analytics, align metrics across platforms, and deliver the report with its raw data.',
+        src: 'assets/creator-performance-motion.html?v=1',
+        frameTitle: 'Actionbook reading creator analytics across platforms and delivering a sourced performance report'
       }
     };
     let motionPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
